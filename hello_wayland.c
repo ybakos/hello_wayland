@@ -16,16 +16,14 @@ static const int32_t CURSOR_HOT_SPOT_Y = 35;
 
 static bool done = false;
 
-void on_button(uint32_t button)
-{
+void on_button(uint32_t button) {
     done = true;
 }
 
-int main(void)
-{
-    struct wl_buffer *buffer;
-    struct wl_shm_pool *pool;
-    struct wl_shell_surface *surface;
+int main(int argc, char* argv[]) {
+    struct wl_buffer* buffer;
+    struct wl_shm_pool* pool;
+    struct wl_shell_surface* surface;
     int image;
 
     hello_setup_wayland();
